@@ -25,4 +25,4 @@ The **School Management System** is a Windows Forms application developed using 
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/samounneang/school-management-system.git
+   git clone https://github.com/samounneang/SchoolManagement
