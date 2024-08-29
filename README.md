@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **School Management System** is a Windows Forms application developed using C# .NET Framework 8.0. This application is designed to manage various aspects of a school's operations, including student enrollment, teacher management, class scheduling, attendance tracking, and report generation.
+The **School Management System** is a Windows Forms application developed using C# .NET Framework 8.0. This application manages various aspects of a school's operations, including student enrollment, teacher management, class scheduling, attendance tracking, and report generation.
 
 ## Features
 
@@ -17,12 +17,12 @@ The **School Management System** is a Windows Forms application developed using 
 
 - **C#**: Core programming language for the application.
 - **Windows Forms**: Used for building the graphical user interface.
-- **SQL Server**: Database management system for storing application data.
+- **SQL Server**: A database management system for storing application data.
 - **Entity Framework**: For data access (if used).
-- **.NET Framework 8.0**: The framework version used for the development of the application.
+- **.NET Framework 8.0**: The framework version used to develop the application.
 
 ## Installation
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/school-management-system.git
+   git clone https://github.com/samounneang/school-management-system.git
