@@ -34,3 +34,5 @@ The **School Management System** is a Windows Forms application developed using 
 3. **Build and Run**:
    Build the solution in Visual Studio by clicking on Build > Build Solution.
    Run the application by pressing F5 or selecting Debug > Start Debugging.
+	
+1. Thank you
