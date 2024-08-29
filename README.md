@@ -18,7 +18,6 @@ The **School Management System** is a Windows Forms application developed using 
 - **C#**: Core programming language for the application.
 - **Windows Forms**: Used for building the graphical user interface.
 - **SQL Server**: A database management system for storing application data.
-- **Entity Framework**: For data access (if used).
 - **.NET Framework 8.0**: The framework version used to develop the application.
 
 ## Installation
@@ -26,3 +25,12 @@ The **School Management System** is a Windows Forms application developed using 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/samounneang/SchoolManagement
+2. **Open the Solution**:
+   Open the solution file (SchoolManagement.sln) in Visual Studio.
+- **Set Up the Database**:
+   Create a new database in SQL Server.
+   Run the provided SQL scripts in the Database folder to set up the necessary tables and stored procedures.
+   Update the connection string in the App.config file to point to your SQL Server instance.
+3. **Build and Run**:
+   Build the solution in Visual Studio by clicking on Build > Build Solution.
+   Run the application by pressing F5 or selecting Debug > Start Debugging.
