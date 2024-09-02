@@ -9,5 +9,6 @@ namespace SchoolManagement.Views
     internal class Class1
     {
         private string test;
+        private string name;
     }
 }
