@@ -10,5 +10,6 @@ namespace SchoolManagement.Views
     {
         private string test;
         private string name;
+        private int age;
     }
 }
