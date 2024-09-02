@@ -14,7 +14,7 @@ namespace SchoolManagement
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             AdminDashboard adminDashboard = new AdminDashboard();
-            Application.Run(adminDashboard);
+            Application.Run(new UserLogin());
         }
     }
 }

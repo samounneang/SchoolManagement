@@ -44,7 +44,6 @@
             paymentToolStripMenuItem = new ToolStripMenuItem();
             cerficateToolStripMenuItem = new ToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            panel1 = new Panel();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,19 +66,19 @@
             // masterOrginzationToolStripMenuItem
             // 
             masterOrginzationToolStripMenuItem.Name = "masterOrginzationToolStripMenuItem";
-            masterOrginzationToolStripMenuItem.Size = new Size(180, 22);
+            masterOrginzationToolStripMenuItem.Size = new Size(173, 22);
             masterOrginzationToolStripMenuItem.Text = "Master orginzation";
             // 
             // masterTeacherToolStripMenuItem
             // 
             masterTeacherToolStripMenuItem.Name = "masterTeacherToolStripMenuItem";
-            masterTeacherToolStripMenuItem.Size = new Size(180, 22);
+            masterTeacherToolStripMenuItem.Size = new Size(173, 22);
             masterTeacherToolStripMenuItem.Text = "Master teacher";
             // 
             // masterCourseToolStripMenuItem
             // 
             masterCourseToolStripMenuItem.Name = "masterCourseToolStripMenuItem";
-            masterCourseToolStripMenuItem.Size = new Size(180, 22);
+            masterCourseToolStripMenuItem.Size = new Size(173, 22);
             masterCourseToolStripMenuItem.Text = "Master course";
             // 
             // studentToolStripMenuItem
@@ -92,14 +91,14 @@
             // registerToolStripMenuItem
             // 
             registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            registerToolStripMenuItem.Size = new Size(180, 22);
+            registerToolStripMenuItem.Size = new Size(116, 22);
             registerToolStripMenuItem.Text = "Register";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
             // 
             // dropToolStripMenuItem
             // 
             dropToolStripMenuItem.Name = "dropToolStripMenuItem";
-            dropToolStripMenuItem.Size = new Size(180, 22);
+            dropToolStripMenuItem.Size = new Size(116, 22);
             dropToolStripMenuItem.Text = "Drop";
             // 
             // teacherToolStripMenuItem
@@ -112,13 +111,13 @@
             // registerToolStripMenuItem1
             // 
             registerToolStripMenuItem1.Name = "registerToolStripMenuItem1";
-            registerToolStripMenuItem1.Size = new Size(180, 22);
+            registerToolStripMenuItem1.Size = new Size(116, 22);
             registerToolStripMenuItem1.Text = "Register";
             // 
             // resignToolStripMenuItem
             // 
             resignToolStripMenuItem.Name = "resignToolStripMenuItem";
-            resignToolStripMenuItem.Size = new Size(180, 22);
+            resignToolStripMenuItem.Size = new Size(116, 22);
             resignToolStripMenuItem.Text = "Resign";
             // 
             // paymentToolStripMenuItem
@@ -138,19 +137,11 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // panel1
-            // 
-            panel1.Location = new Point(0, 89);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(800, 349);
-            panel1.TabIndex = 1;
-            // 
             // AdminDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(panel1);
+            ClientSize = new Size(800, 318);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "AdminDashboard";
@@ -177,6 +168,5 @@
         private ToolStripMenuItem paymentToolStripMenuItem;
         private ToolStripMenuItem cerficateToolStripMenuItem;
         private ContextMenuStrip contextMenuStrip1;
-        private Panel panel1;
     }
 }

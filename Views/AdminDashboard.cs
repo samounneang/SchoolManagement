@@ -25,8 +25,8 @@ namespace SchoolManagement.Views
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StudentControl studentControl = new StudentControl();
-            panel1.Controls.Clear();
-            panel1.Controls.Add(studentControl);
+            //panel1.Controls.Clear();
+            //panel1.Controls.Add(studentControl);
         }
     }
 }

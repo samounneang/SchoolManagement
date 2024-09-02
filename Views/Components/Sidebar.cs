@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SchoolManagement
+namespace SchoolManagement.Views.Components
 {
-    public partial class ClearableText : UserControl
+    public partial class Sidebar : UserControl
     {
-        public ClearableText()
+        public Sidebar()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelDropdown.Visible = false;
         }
     }
 }

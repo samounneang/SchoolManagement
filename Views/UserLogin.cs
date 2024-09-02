@@ -146,17 +146,20 @@ namespace SchoolManagement.Views
             //    MessageBox.Show("Wrong user or password!");
             //this.Hide();
 
-            MainForm mainForm = new MainForm();
+
 
             // Subscribe to the Shown event of the MainForm
-            mainForm.Shown += (s, args) =>
-            {
-                // Close the LoginForm when the MainForm is shown
-                this.Close();
-            };
+            //mainForm.Shown += (s, args) =>
+            //{
+            //    // Close the LoginForm when the MainForm is shown
+            //    this.Close();
+            //};
 
             // Show the MainForm
+
+            MainForm mainForm = new MainForm();
             mainForm.Show();
+            this.Hide();
 
         }
         public void closeLoginForm(Form e)

@@ -23,16 +23,10 @@ namespace SchoolManagement.CustomControl
         {
             Dock = DockStyle.Top;
             FlatStyle = FlatStyle.Flat;
-            //Location = new Point(0, 0);
-            //Name = "button1";
-            //Size = new Size(160, 33);
-            //TabIndex = 0;
-            //Text = "button1";
             TextAlign = ContentAlignment.MiddleRight;
             FlatAppearance.BorderSize = 0;
             UseVisualStyleBackColor = true;
             Padding = new Padding(0, 0, 10, 0);
-
         }
     }
 }

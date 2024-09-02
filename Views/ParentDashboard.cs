@@ -16,5 +16,10 @@ namespace SchoolManagement.Views
         {
             InitializeComponent();
         }
+
+        private void ParentDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
