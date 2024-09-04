@@ -59,15 +59,17 @@ namespace SchoolManagement.Properties {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap login_16dp_434343_FILL0_wght400_GRAD0_opsz20__1_ {
-            get {
-                object obj = ResourceManager.GetObject("login_16dp_434343_FILL0_wght400_GRAD0_opsz20 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
+        //internal static System.Drawing.Bitmap login_16dp_434343_FILL0_wght400_GRAD0_opsz20__1_
+        //{
+        //    get
+        //    {
+        //        object obj = null;// ResourceManager.GetObject("login_16dp_434343_FILL0_wght400_GRAD0_opsz20 (1)", resourceCulture);
+        //        return ((System.Drawing.Bitmap)(obj));
+        //    }
+        //}
     }
 }

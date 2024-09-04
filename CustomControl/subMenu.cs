@@ -15,7 +15,7 @@ namespace SchoolManagement.CustomControl
     //Transparency: The magenta color(RGB: 255,0,255, Hex: 0xFF00FF) is rendered transparent.
     //Themes: Visual Studio has multiple themes, but each theme is considered either dark or light.Your icon should be designed for the light theme.When Visual Studio uses a dark theme, the dark and light colors in the icon are automatically inverted.
     //[ToolboxBitmap(typeof(MyButton))]
-    [ToolboxBitmap(typeof(subMenu), "SchoolManagement.CustomControl.MyButton.bmp")]
+    //[ToolboxBitmap(typeof(subMenu), "SchoolManagement.CustomControl.MyButton.bmp")]
     //[ToolboxBitmap(@"C:\Files\Resources\MyIcon.bmp")]
     internal class subMenu:Button
     {

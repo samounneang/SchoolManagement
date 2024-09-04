@@ -15,15 +15,20 @@ namespace SchoolManagement.CustomControl
     //Transparency: The magenta color(RGB: 255,0,255, Hex: 0xFF00FF) is rendered transparent.
     //Themes: Visual Studio has multiple themes, but each theme is considered either dark or light.Your icon should be designed for the light theme.When Visual Studio uses a dark theme, the dark and light colors in the icon are automatically inverted.
     //[ToolboxBitmap(typeof(MyButton))]
-    [ToolboxBitmap(typeof(MyButton), "SchoolManagement.CustomControl.MyButton.bmp")]
+    //[ToolboxBitmap(typeof(MyButton), "SchoolManagement.CustomControl.MyButton.bmp")]
     //[ToolboxBitmap(@"C:\Files\Resources\MyIcon.bmp")]
     internal class MyButton:Button
     {
         public MyButton()
         {
-            this.BackColor = Color.Black;
-            this.ForeColor = Color.Red;
-            this.Cursor = Cursors.WaitCursor;
+            FlatAppearance.BorderSize = 0;
+            FlatStyle = FlatStyle.Flat;
+            Location = new Point(97, 108);
+            Name = "button1";
+            Size = new Size(246, 74);
+            TabIndex = 0;
+            Text = "button1";
+            UseVisualStyleBackColor = true;
         }
     }
 }

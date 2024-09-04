@@ -157,10 +157,10 @@ namespace SchoolManagement.Views
 
             // Show the MainForm
 
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            //MainForm mainForm = new MainForm();
+            //mainForm.Show();
             this.Hide();
-
+            new MainForm().Show();
         }
         public void closeLoginForm(Form e)
         {
@@ -174,7 +174,7 @@ namespace SchoolManagement.Views
 
         private void linkForgetPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
+            MessageBox.Show("Your password has been message.");
         }
     }
 }

@@ -41,13 +41,17 @@
             // 
             // btnLogin
             // 
+            btnLogin.BackgroundImage = (Image)resources.GetObject("btnLogin.BackgroundImage");
+            btnLogin.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogin.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLogin.ForeColor = SystemColors.ButtonHighlight;
             btnLogin.Location = new Point(100, 221);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(119, 30);
             btnLogin.TabIndex = 2;
-            btnLogin.Text = "&ចូលប្រើ";
+            btnLogin.Text = "ចូលប្រើ";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += button1_Click;
             // 
@@ -58,7 +62,7 @@
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(113, 30);
             btnRegister.TabIndex = 3;
-            btnRegister.Text = "&ចុះឈ្មោះ";
+            btnRegister.Text = "ចុះឈ្មោះ";
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += button2_Click;
             // 
@@ -105,17 +109,11 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.ErrorImage = (Image)resources.GetObject("pictureBox1.ErrorImage");
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(428, 2);
+            pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(26, 23);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 6;
+            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // UserLogin
             // 
@@ -123,7 +121,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(457, 354);
             ControlBox = false;
-            Controls.Add(pictureBox1);
             Controls.Add(lblLogin);
             Controls.Add(linkForgetPassword);
             Controls.Add(txtPassword);

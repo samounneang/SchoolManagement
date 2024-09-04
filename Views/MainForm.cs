@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SchoolManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
-using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,119 +19,58 @@ namespace SchoolManagement.Views
             InitializeComponent();
         }
 
+        private void miniMenu_Click(object sender, EventArgs e)
+        {
+            if (panelMenu.Width == 141)
+            {
+                panelMenu.Size = new Size(50, 450);
+                lblBrand.Text = "NIT";
+
+            }
+            else
+            {
+                panelMenu.Size = new Size(141, 450);
+                lblBrand.Text = "NIT Traning Center";
+            }
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            new UserLogin().Show();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void myButton2_Click(object sender, EventArgs e)
+        {
+            if (studentdropdown.Visible == true)
+                studentdropdown.Visible = false;
+            else
+                studentdropdown.Visible = true;
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
+            List<Users> users = new List<Users>();
+            
+            //Users users1 = new Users();
+            //users1.Role = "admin";
+            //users1.UserId = 2;
+            //users1.Username = "username";
 
+            //users.Add(users1);
 
+            users.Add(new Users { Role = "Admin", UserId=1, Username= "useradmin"});
+            users.Add(new Users { Role = "Admin", UserId = 1, Username = "useradmin" });
+            users.Add(new Users { Role = "Admin", UserId = 1, Username = "useradmin" });
+            users.Add(new Users { Role = "Admin", UserId = 1, Username = "useradmin" });
 
-            //var s = "";
-            //foreach (var i in Application.OpenForms) { 
-            //    s += i;
-            //}
-
-
-            // Application.OpenForms["UserLogin"].Close();
-            //foreach (Form form in Application.OpenForms)
-            //{
-            //    if (form.Name == "LoginForm")  // or use any condition to identify the form
-            //    {
-            //        form.Close();
-            //    }
-            //}
-
-            //Application.OpenForms["LoginForm"].Close();
-        }
-
-        private void MainForm_Shown(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (panelDropdown.Visible == true)
-                panelDropdown.Visible = false;
-            else
-                panelDropdown.Visible = true;
-        }
-
-        private void Master_Click(object sender, EventArgs e)
-        {
-            if (panelDropdown.Visible == true)
-                panelDropdown.Visible = false;
-            else
-                panelDropdown.Visible = true;
-        }
-
-        private void subMenu1_Click(object sender, EventArgs e)
-        {
-            subMenu1.BackColor = Color.Red;
-
-            // Clear others button style
-            subMenu2.BackColor = SystemColors.ActiveCaption;
-            subMenu3.BackColor = SystemColors.ActiveCaption;
-            subMenu4.BackColor = SystemColors.ActiveCaption;
-            subMenu5.BackColor = SystemColors.ActiveCaption;
-        }
-
-        private void subMenu2_Click(object sender, EventArgs e)
-        {
-
-            subMenu2.BackColor = Color.Red;
-
-            // Clear others button style
-            subMenu1.BackColor = SystemColors.ActiveCaption;
-            subMenu3.BackColor = SystemColors.ActiveCaption;
-            subMenu4.BackColor = SystemColors.ActiveCaption;
-            subMenu5.BackColor = SystemColors.ActiveCaption;
-        }
-
-        private void subMenu3_Click(object sender, EventArgs e)
-        {
-            subMenu3.BackColor = Color.Red;
-
-            // Clear others button style
-            subMenu1.BackColor = SystemColors.ActiveCaption;
-            subMenu2.BackColor = SystemColors.ActiveCaption;
-            subMenu4.BackColor = SystemColors.ActiveCaption;
-            subMenu5.BackColor = SystemColors.ActiveCaption;
-        }
-
-        private void subMenu4_Click(object sender, EventArgs e)
-        {
-            subMenu4.BackColor = Color.Red;
-
-            // Clear others button style
-            subMenu1.BackColor = SystemColors.ActiveCaption;
-            subMenu3.BackColor = SystemColors.ActiveCaption;
-            subMenu2.BackColor = SystemColors.ActiveCaption;
-            subMenu5.BackColor = SystemColors.ActiveCaption;
-        }
-
-        private void subMenu5_Click(object sender, EventArgs e)
-        {
-            subMenu5.BackColor = Color.Red;
-
-            // Clear others button style
-            subMenu1.BackColor = SystemColors.ActiveCaption;
-            subMenu3.BackColor = SystemColors.ActiveCaption;
-            subMenu4.BackColor = SystemColors.ActiveCaption;
-            subMenu2.BackColor = SystemColors.ActiveCaption;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            int i = 0;
-            i = int.Parse(totalStudent.Text);
-            i++;
-            totalStudent.Text = i.ToString();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            UserLogin userLogin = new UserLogin();
-            userLogin.Show();
-            this.Hide();
+            dataGridView1.DataSource = users;
         }
     }
 }

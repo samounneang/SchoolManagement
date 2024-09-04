@@ -28,308 +28,220 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            panelDropdown = new Panel();
-            subMenu5 = new CustomControl.subMenu();
-            subMenu4 = new CustomControl.subMenu();
-            subMenu3 = new CustomControl.subMenu();
-            subMenu2 = new CustomControl.subMenu();
-            subMenu1 = new CustomControl.subMenu();
-            Master = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            panelMenu = new Panel();
             panel2 = new Panel();
-            label3 = new Label();
-            button1 = new Button();
-            label1 = new Label();
+            studentdropdown = new Panel();
+            myButton2 = new CustomControl.MyButton();
+            myButton1 = new CustomControl.MyButton();
             panel3 = new Panel();
-            button2 = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            lblBrand = new Label();
+            panelHeader = new Panel();
+            pictureBox2 = new PictureBox();
+            miniMenu = new PictureBox();
+            panel1 = new Panel();
             panel4 = new Panel();
-            totalStudent = new Label();
-            label2 = new Label();
             panel5 = new Panel();
-            panel6 = new Panel();
-            panel1.SuspendLayout();
-            panelDropdown.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            panelMenu.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
-            panel4.SuspendLayout();
+            panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)miniMenu).BeginInit();
+            panel1.SuspendLayout();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // panelMenu
             // 
-            panel1.Controls.Add(panelDropdown);
-            panel1.Controls.Add(Master);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(151, 450);
-            panel1.TabIndex = 1;
-            // 
-            // panelDropdown
-            // 
-            panelDropdown.BackColor = SystemColors.ActiveCaption;
-            panelDropdown.Controls.Add(subMenu5);
-            panelDropdown.Controls.Add(subMenu4);
-            panelDropdown.Controls.Add(subMenu3);
-            panelDropdown.Controls.Add(subMenu2);
-            panelDropdown.Controls.Add(subMenu1);
-            panelDropdown.Dock = DockStyle.Top;
-            panelDropdown.Location = new Point(0, 44);
-            panelDropdown.Name = "panelDropdown";
-            panelDropdown.Size = new Size(151, 119);
-            panelDropdown.TabIndex = 5;
-            // 
-            // subMenu5
-            // 
-            subMenu5.Dock = DockStyle.Top;
-            subMenu5.FlatAppearance.BorderSize = 0;
-            subMenu5.FlatStyle = FlatStyle.Flat;
-            subMenu5.Location = new Point(0, 92);
-            subMenu5.Name = "subMenu5";
-            subMenu5.Padding = new Padding(0, 0, 10, 0);
-            subMenu5.Size = new Size(151, 23);
-            subMenu5.TabIndex = 4;
-            subMenu5.Text = "subMenu5";
-            subMenu5.TextAlign = ContentAlignment.MiddleRight;
-            subMenu5.UseVisualStyleBackColor = true;
-            subMenu5.Click += subMenu5_Click;
-            // 
-            // subMenu4
-            // 
-            subMenu4.Dock = DockStyle.Top;
-            subMenu4.FlatAppearance.BorderSize = 0;
-            subMenu4.FlatStyle = FlatStyle.Flat;
-            subMenu4.Location = new Point(0, 69);
-            subMenu4.Name = "subMenu4";
-            subMenu4.Padding = new Padding(0, 0, 10, 0);
-            subMenu4.Size = new Size(151, 23);
-            subMenu4.TabIndex = 3;
-            subMenu4.Text = "subMenu4";
-            subMenu4.TextAlign = ContentAlignment.MiddleRight;
-            subMenu4.UseVisualStyleBackColor = true;
-            subMenu4.Click += subMenu4_Click;
-            // 
-            // subMenu3
-            // 
-            subMenu3.Dock = DockStyle.Top;
-            subMenu3.FlatAppearance.BorderSize = 0;
-            subMenu3.FlatStyle = FlatStyle.Flat;
-            subMenu3.Location = new Point(0, 46);
-            subMenu3.Name = "subMenu3";
-            subMenu3.Padding = new Padding(0, 0, 10, 0);
-            subMenu3.Size = new Size(151, 23);
-            subMenu3.TabIndex = 2;
-            subMenu3.Text = "subMenu3";
-            subMenu3.TextAlign = ContentAlignment.MiddleRight;
-            subMenu3.UseVisualStyleBackColor = true;
-            subMenu3.Click += subMenu3_Click;
-            // 
-            // subMenu2
-            // 
-            subMenu2.Dock = DockStyle.Top;
-            subMenu2.FlatAppearance.BorderSize = 0;
-            subMenu2.FlatStyle = FlatStyle.Flat;
-            subMenu2.Location = new Point(0, 23);
-            subMenu2.Name = "subMenu2";
-            subMenu2.Padding = new Padding(0, 0, 10, 0);
-            subMenu2.Size = new Size(151, 23);
-            subMenu2.TabIndex = 1;
-            subMenu2.Text = "subMenu2";
-            subMenu2.TextAlign = ContentAlignment.MiddleRight;
-            subMenu2.UseVisualStyleBackColor = true;
-            subMenu2.Click += subMenu2_Click;
-            // 
-            // subMenu1
-            // 
-            subMenu1.Dock = DockStyle.Top;
-            subMenu1.FlatAppearance.BorderSize = 0;
-            subMenu1.FlatStyle = FlatStyle.Flat;
-            subMenu1.Location = new Point(0, 0);
-            subMenu1.Name = "subMenu1";
-            subMenu1.Padding = new Padding(0, 0, 10, 0);
-            subMenu1.Size = new Size(151, 23);
-            subMenu1.TabIndex = 0;
-            subMenu1.Text = "subMenu1";
-            subMenu1.TextAlign = ContentAlignment.MiddleRight;
-            subMenu1.UseVisualStyleBackColor = true;
-            subMenu1.Click += subMenu1_Click;
-            // 
-            // Master
-            // 
-            Master.Dock = DockStyle.Top;
-            Master.FlatStyle = FlatStyle.Flat;
-            Master.Location = new Point(0, 0);
-            Master.Name = "Master";
-            Master.Size = new Size(151, 44);
-            Master.TabIndex = 4;
-            Master.Text = "Master";
-            Master.UseVisualStyleBackColor = true;
-            Master.Click += Master_Click;
+            panelMenu.BackColor = SystemColors.Control;
+            panelMenu.Controls.Add(panel2);
+            panelMenu.Dock = DockStyle.Left;
+            panelMenu.Location = new Point(0, 0);
+            panelMenu.Name = "panelMenu";
+            panelMenu.Size = new Size(117, 450);
+            panelMenu.TabIndex = 0;
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.GradientActiveCaption;
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(label1);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(151, 0);
+            panel2.Controls.Add(studentdropdown);
+            panel2.Controls.Add(myButton2);
+            panel2.Controls.Add(myButton1);
+            panel2.Controls.Add(panel3);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(649, 41);
-            panel2.TabIndex = 0;
+            panel2.Size = new Size(117, 450);
+            panel2.TabIndex = 1;
             // 
-            // label3
+            // studentdropdown
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label3.Location = new Point(475, 15);
-            label3.Name = "label3";
-            label3.Size = new Size(81, 15);
-            label3.TabIndex = 2;
-            label3.Text = "User: Lok Lak";
+            studentdropdown.BackColor = SystemColors.ActiveCaption;
+            studentdropdown.Dock = DockStyle.Top;
+            studentdropdown.Location = new Point(0, 118);
+            studentdropdown.Name = "studentdropdown";
+            studentdropdown.Size = new Size(117, 130);
+            studentdropdown.TabIndex = 1;
             // 
-            // button1
+            // myButton2
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.Location = new Point(562, 11);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "Log out";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            myButton2.Dock = DockStyle.Top;
+            myButton2.FlatAppearance.BorderSize = 0;
+            myButton2.FlatStyle = FlatStyle.Flat;
+            myButton2.Location = new Point(0, 87);
+            myButton2.Name = "myButton2";
+            myButton2.Size = new Size(117, 31);
+            myButton2.TabIndex = 0;
+            myButton2.Text = "Student";
+            myButton2.UseVisualStyleBackColor = true;
+            myButton2.Click += myButton2_Click;
             // 
-            // label1
+            // myButton1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(29, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(119, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Branch: Phnom penh";
+            myButton1.Dock = DockStyle.Top;
+            myButton1.FlatAppearance.BorderSize = 0;
+            myButton1.FlatStyle = FlatStyle.Flat;
+            myButton1.Location = new Point(0, 51);
+            myButton1.Name = "myButton1";
+            myButton1.Size = new Size(117, 36);
+            myButton1.TabIndex = 0;
+            myButton1.Text = "Dashboard";
+            myButton1.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
-            panel3.Controls.Add(button2);
-            panel3.Controls.Add(flowLayoutPanel1);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(151, 41);
+            panel3.Controls.Add(lblBrand);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(649, 409);
-            panel3.TabIndex = 2;
+            panel3.Size = new Size(117, 51);
+            panel3.TabIndex = 0;
             // 
-            // button2
+            // lblBrand
             // 
-            button2.Location = new Point(9, 124);
-            button2.Name = "button2";
-            button2.Size = new Size(187, 70);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            lblBrand.AutoSize = true;
+            lblBrand.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            lblBrand.ForeColor = Color.White;
+            lblBrand.Location = new Point(32, 12);
+            lblBrand.Name = "lblBrand";
+            lblBrand.Size = new Size(46, 28);
+            lblBrand.TabIndex = 0;
+            lblBrand.Text = "NIT";
+            lblBrand.Click += label1_Click;
             // 
-            // flowLayoutPanel1
+            // panelHeader
             // 
-            flowLayoutPanel1.Controls.Add(panel4);
-            flowLayoutPanel1.Controls.Add(panel5);
-            flowLayoutPanel1.Controls.Add(panel6);
-            flowLayoutPanel1.Location = new Point(6, 3);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(640, 115);
-            flowLayoutPanel1.TabIndex = 0;
+            panelHeader.BackgroundImage = (Image)resources.GetObject("panelHeader.BackgroundImage");
+            panelHeader.Controls.Add(pictureBox2);
+            panelHeader.Controls.Add(miniMenu);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(117, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(683, 51);
+            panelHeader.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(626, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(31, 30);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // miniMenu
+            // 
+            miniMenu.BackColor = Color.Transparent;
+            miniMenu.Image = (Image)resources.GetObject("miniMenu.Image");
+            miniMenu.Location = new Point(15, 12);
+            miniMenu.Name = "miniMenu";
+            miniMenu.Size = new Size(31, 30);
+            miniMenu.SizeMode = PictureBoxSizeMode.StretchImage;
+            miniMenu.TabIndex = 1;
+            miniMenu.TabStop = false;
+            miniMenu.Click += miniMenu_Click;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(panel5);
+            panel1.Controls.Add(panel4);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(117, 51);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(683, 399);
+            panel1.TabIndex = 2;
             // 
             // panel4
             // 
-            panel4.BackColor = SystemColors.InactiveBorder;
-            panel4.Controls.Add(totalStudent);
-            panel4.Controls.Add(label2);
-            panel4.Location = new Point(3, 3);
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(167, 112);
+            panel4.Size = new Size(683, 118);
             panel4.TabIndex = 0;
-            // 
-            // totalStudent
-            // 
-            totalStudent.AutoSize = true;
-            totalStudent.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            totalStudent.Location = new Point(41, 43);
-            totalStudent.Name = "totalStudent";
-            totalStudent.Size = new Size(33, 37);
-            totalStudent.TabIndex = 1;
-            totalStudent.Text = "0";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(43, 20);
-            label2.Name = "label2";
-            label2.Size = new Size(79, 15);
-            label2.TabIndex = 0;
-            label2.Text = "Total Student:";
             // 
             // panel5
             // 
-            panel5.BackColor = SystemColors.InactiveBorder;
-            panel5.Location = new Point(176, 3);
+            panel5.Controls.Add(dataGridView1);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(0, 118);
             panel5.Name = "panel5";
-            panel5.Size = new Size(167, 112);
+            panel5.Size = new Size(683, 281);
             panel5.TabIndex = 1;
             // 
-            // panel6
+            // dataGridView1
             // 
-            panel6.BackColor = SystemColors.InactiveBorder;
-            panel6.Location = new Point(349, 3);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(167, 112);
-            panel6.TabIndex = 1;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(683, 281);
+            dataGridView1.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(panelHeader);
+            Controls.Add(panelMenu);
             Name = "MainForm";
             Text = "MainForm";
             Load += MainForm_Load;
-            Shown += MainForm_Shown;
-            panel1.ResumeLayout(false);
-            panelDropdown.ResumeLayout(false);
+            panelMenu.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             panel3.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            panel3.PerformLayout();
+            panelHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)miniMenu).EndInit();
+            panel1.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
-        private Panel panel1;
-        private Panel panelDropdown;
-        private CustomControl.subMenu subMenu5;
-        private CustomControl.subMenu subMenu4;
-        private CustomControl.subMenu subMenu3;
-        private CustomControl.subMenu subMenu2;
-        private CustomControl.subMenu subMenu1;
-        private Button Master;
-        private Panel panel2;
-        private Button button1;
-        private Label label1;
-        private Panel panel3;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Panel panel4;
-        private Label totalStudent;
-        private Label label2;
-        private Panel panel5;
-        private Panel panel6;
-        private Button button2;
-        private Label label3;
-
         #endregion
-        // private Components.Navbar navbar1;
+
+        private Panel panelMenu;
+        private Panel panelHeader;
+        private Panel panel1;
+        private PictureBox miniMenu;
+        private PictureBox pictureBox2;
+        private Label lblBrand;
+        private Panel panel2;
+        private Panel panel3;
+        private CustomControl.MyButton myButton2;
+        private CustomControl.MyButton myButton1;
+        private Panel studentdropdown;
+        private Panel panel5;
+        private DataGridView dataGridView1;
+        private Panel panel4;
     }
 }

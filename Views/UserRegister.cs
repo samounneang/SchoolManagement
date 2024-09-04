@@ -16,5 +16,16 @@ namespace SchoolManagement.Views
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            new UserLogin().Show();
+            this.Hide();
+        }
+
+        private void linkForgetPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Your password has been reset.");
+        }
     }
 }
