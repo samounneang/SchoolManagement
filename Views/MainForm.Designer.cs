@@ -40,9 +40,9 @@
             pictureBox2 = new PictureBox();
             miniMenu = new PictureBox();
             panel1 = new Panel();
-            panel4 = new Panel();
             panel5 = new Panel();
             dataGridView1 = new DataGridView();
+            panel4 = new Panel();
             panelMenu.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -66,6 +66,7 @@
             // 
             // panel2
             // 
+            panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.Controls.Add(studentdropdown);
             panel2.Controls.Add(myButton2);
             panel2.Controls.Add(myButton1);
@@ -87,19 +88,21 @@
             // 
             // myButton2
             // 
+            myButton2.BackColor = SystemColors.Control;
             myButton2.Dock = DockStyle.Top;
-            myButton2.FlatAppearance.BorderSize = 0;
+            myButton2.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 1, 0);
             myButton2.FlatStyle = FlatStyle.Flat;
             myButton2.Location = new Point(0, 87);
             myButton2.Name = "myButton2";
             myButton2.Size = new Size(117, 31);
             myButton2.TabIndex = 0;
             myButton2.Text = "Student";
-            myButton2.UseVisualStyleBackColor = true;
+            myButton2.UseVisualStyleBackColor = false;
             myButton2.Click += myButton2_Click;
             // 
             // myButton1
             // 
+            myButton1.BackColor = SystemColors.ButtonFace;
             myButton1.Dock = DockStyle.Top;
             myButton1.FlatAppearance.BorderSize = 0;
             myButton1.FlatStyle = FlatStyle.Flat;
@@ -108,10 +111,11 @@
             myButton1.Size = new Size(117, 36);
             myButton1.TabIndex = 0;
             myButton1.Text = "Dashboard";
-            myButton1.UseVisualStyleBackColor = true;
+            myButton1.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.Controls.Add(lblBrand);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
@@ -122,6 +126,7 @@
             // lblBrand
             // 
             lblBrand.AutoSize = true;
+            lblBrand.BackColor = Color.Transparent;
             lblBrand.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             lblBrand.ForeColor = Color.White;
             lblBrand.Location = new Point(32, 12);
@@ -177,14 +182,6 @@
             panel1.Size = new Size(683, 399);
             panel1.TabIndex = 2;
             // 
-            // panel4
-            // 
-            panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(683, 118);
-            panel4.TabIndex = 0;
-            // 
             // panel5
             // 
             panel5.Controls.Add(dataGridView1);
@@ -202,6 +199,14 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(683, 281);
             dataGridView1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            panel4.Dock = DockStyle.Top;
+            panel4.Location = new Point(0, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(683, 118);
+            panel4.TabIndex = 0;
             // 
             // MainForm
             // 
