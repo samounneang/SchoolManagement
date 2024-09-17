@@ -27,6 +27,7 @@ namespace SchoolManagement.CustomControl
             FlatAppearance.BorderSize = 0;
             UseVisualStyleBackColor = true;
             Padding = new Padding(0, 0, 10, 0);
+            Size = new Size(246, 75);
         }
     }
 }

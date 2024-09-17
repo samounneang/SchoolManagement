@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.Devices;
+using SchoolManagement.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -23,12 +24,25 @@ namespace SchoolManagement.CustomControl
         {
             FlatAppearance.BorderSize = 0;
             FlatStyle = FlatStyle.Flat;
-            Location = new Point(97, 108);
+            //Location = new Point(97, 108);
             Name = "button1";
-            Size = new Size(246, 74);
+            //Size = new Size(246, 80);
             TabIndex = 0;
-            Text = "button1";
+            //Text = "button1";
             UseVisualStyleBackColor = true;
+
+            //BackgroundImage = (Image)resources.GetObject("myButton3.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            Cursor = Cursors.Hand;
+            
+            //FlatStyle = FlatStyle.Flat;
+            Location = new Point(3, 218);
+            //Name = "myButton3";
+            Size = new Size(148, 35);
+            TabIndex = 0;
+            Text = " ";
+            UseVisualStyleBackColor = true;
+            
         }
     }
 }

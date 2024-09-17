@@ -16,51 +16,52 @@ namespace SchoolManagement.Views
         {
 
         }
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            string username = "";// = txtUsername.Text;
-            string password = "";// = txtPassword.Text;
+        //private void btnLogin_Click(object sender, EventArgs e)
+        //{
+        //    string username = "";// = txtUsername.Text;
+        //    string password = "";// = txtPassword.Text;
 
-            if (AuthenticateUser(username, password, out string role))
-            {
-                MessageBox.Show($"Login successful! Role: {role}");
-                //LoadRoleBasedForm(role);
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password.");
-            }
-        }
+        //    if (AuthenticateUser(username, password, out string role))
+        //    {
+        //        MessageBox.Show($"Login successful! Role: {role}");
+        //        //LoadRoleBasedForm(role);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Invalid username or password.");
+        //    }
+        //}
 
-        private bool AuthenticateUser(string username, string password, out string role)
-        {
-            role = string.Empty;
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "SELECT PasswordHash, PasswordSalt, RoleName FROM Users INNER JOIN Roles ON Users.RoleID = Roles.RoleID WHERE Username = @Username";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Username", username);
+        //private bool AuthenticateUser(string username, string password, out string role)
+        //{
+        //    //role = string.Empty;
+        //    //using (SqlConnection connection = new SqlConnection(connectionString))
+        //    //{
+        //    //    connection.Open();
+        //    //    string query = "SELECT PasswordHash, PasswordSalt, RoleName FROM Users INNER JOIN Roles ON Users.RoleID = Roles.RoleID WHERE Username = @Username";
+        //    //    using (SqlCommand command = new SqlCommand(query, connection))
+        //    //    {
+        //    //        command.Parameters.AddWithValue("@Username", username);
 
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            byte[] storedHash = (byte[])reader["PasswordHash"];
-                            byte[] storedSalt = (byte[])reader["PasswordSalt"];
-                            role = reader["RoleName"].ToString();
+        //    //        using (SqlDataReader reader = command.ExecuteReader())
+        //    //        {
+        //    //            if (reader.Read())
+        //    //            {
+        //    //                byte[] storedHash = (byte[])reader["PasswordHash"];
+        //    //                byte[] storedSalt = (byte[])reader["PasswordSalt"];
+        //    //                role = reader["RoleName"].ToString();
 
-                            if (PasswordHelper.VerifyPasswordHash(password, storedHash, storedSalt))
-                            {
-                                return true;
-                            }
-                        }
-                    }
-                }
-            }
-            return false;
-        }
+        //    //                if (PasswordHelper.VerifyPasswordHash(password, storedHash, storedSalt))
+        //    //                {
+        //    //                    return true;
+        //    //                }
+        //    //            }
+        //    //        }
+        //    //    }
+        //    //}
+        //    bool t = true;
+        //    return role = true;
+        //}
 
         //private void LoadRoleBasedForm(string role)
         //{
