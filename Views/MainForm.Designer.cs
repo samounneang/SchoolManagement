@@ -33,20 +33,21 @@ namespace SchoolManagement.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panelMenu = new Panel();
-            panel2 = new Panel();
-            myButton7 = new MyButton();
-            btnSetting = new MyButton();
-            myButton6 = new MyButton();
-            myButton5 = new MyButton();
-            myButton4 = new MyButton();
-            instructordropdown = new Panel();
-            myButton3 = new MyButton();
-            studentdropdown = new Panel();
+            AllMenuItems = new Panel();
+            EmployeeMenu = new MyButton();
+            SettingMenu = new MyButton();
+            ReportMenu = new MyButton();
+            LibraryMenu = new MyButton();
+            ParentsMenu = new MyButton();
+            InstructorMenuItem = new Panel();
+            InstructorMenu = new MyButton();
+            StudentMenuItem = new Panel();
+            subMenu4 = new subMenu();
             subMenu3 = new subMenu();
             subMenu2 = new subMenu();
             subMenu1 = new subMenu();
-            myButton2 = new MyButton();
-            myButton1 = new MyButton();
+            StudentMenu = new MyButton();
+            DashboardMenu = new MyButton();
             panel3 = new Panel();
             lblBrand = new Label();
             panelHeader = new Panel();
@@ -55,7 +56,7 @@ namespace SchoolManagement.Views
             pictureBox2 = new PictureBox();
             miniMenu = new PictureBox();
             panel1 = new Panel();
-            panel5 = new Panel();
+            PanelBody = new Panel();
             dataGridView1 = new DataGridView();
             panel4 = new Panel();
             panel8 = new Panel();
@@ -68,15 +69,15 @@ namespace SchoolManagement.Views
             label3 = new Label();
             lblTotalStudent = new Label();
             panelMenu.SuspendLayout();
-            panel2.SuspendLayout();
-            studentdropdown.SuspendLayout();
+            AllMenuItems.SuspendLayout();
+            StudentMenuItem.SuspendLayout();
             panel3.SuspendLayout();
             panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)circularPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)miniMenu).BeginInit();
             panel1.SuspendLayout();
-            panel5.SuspendLayout();
+            PanelBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel4.SuspendLayout();
             panel8.SuspendLayout();
@@ -87,140 +88,158 @@ namespace SchoolManagement.Views
             // panelMenu
             // 
             panelMenu.BackColor = SystemColors.Control;
-            panelMenu.Controls.Add(panel2);
+            panelMenu.Controls.Add(AllMenuItems);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(151, 555);
             panelMenu.TabIndex = 2;
             // 
-            // panel2
+            // AllMenuItems
             // 
-            panel2.BackColor = SystemColors.ButtonHighlight;
-            panel2.Controls.Add(myButton7);
-            panel2.Controls.Add(btnSetting);
-            panel2.Controls.Add(myButton6);
-            panel2.Controls.Add(myButton5);
-            panel2.Controls.Add(myButton4);
-            panel2.Controls.Add(instructordropdown);
-            panel2.Controls.Add(myButton3);
-            panel2.Controls.Add(studentdropdown);
-            panel2.Controls.Add(myButton2);
-            panel2.Controls.Add(myButton1);
-            panel2.Controls.Add(panel3);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(151, 555);
-            panel2.TabIndex = 1;
+            AllMenuItems.BackColor = SystemColors.ButtonHighlight;
+            AllMenuItems.Controls.Add(EmployeeMenu);
+            AllMenuItems.Controls.Add(SettingMenu);
+            AllMenuItems.Controls.Add(ReportMenu);
+            AllMenuItems.Controls.Add(LibraryMenu);
+            AllMenuItems.Controls.Add(ParentsMenu);
+            AllMenuItems.Controls.Add(InstructorMenuItem);
+            AllMenuItems.Controls.Add(InstructorMenu);
+            AllMenuItems.Controls.Add(StudentMenuItem);
+            AllMenuItems.Controls.Add(StudentMenu);
+            AllMenuItems.Controls.Add(DashboardMenu);
+            AllMenuItems.Controls.Add(panel3);
+            AllMenuItems.Dock = DockStyle.Fill;
+            AllMenuItems.Location = new Point(0, 0);
+            AllMenuItems.Name = "AllMenuItems";
+            AllMenuItems.Size = new Size(151, 555);
+            AllMenuItems.TabIndex = 1;
             // 
-            // myButton7
+            // EmployeeMenu
             // 
-            myButton7.BackgroundImage = (Image)resources.GetObject("myButton7.BackgroundImage");
-            myButton7.BackgroundImageLayout = ImageLayout.Stretch;
-            myButton7.Dock = DockStyle.Top;
-            myButton7.FlatAppearance.BorderSize = 0;
-            myButton7.FlatStyle = FlatStyle.Flat;
-            myButton7.Location = new Point(0, 492);
-            myButton7.Name = "myButton7";
-            myButton7.Size = new Size(151, 37);
-            myButton7.TabIndex = 6;
-            myButton7.Text = " ";
-            myButton7.UseVisualStyleBackColor = true;
+            EmployeeMenu.BackgroundImage = (Image)resources.GetObject("EmployeeMenu.BackgroundImage");
+            EmployeeMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            EmployeeMenu.Dock = DockStyle.Top;
+            EmployeeMenu.FlatAppearance.BorderSize = 0;
+            EmployeeMenu.FlatStyle = FlatStyle.Flat;
+            EmployeeMenu.Location = new Point(0, 515);
+            EmployeeMenu.Name = "EmployeeMenu";
+            EmployeeMenu.Size = new Size(151, 37);
+            EmployeeMenu.TabIndex = 6;
+            EmployeeMenu.Text = " ";
+            EmployeeMenu.UseVisualStyleBackColor = true;
+            EmployeeMenu.Click += EmployeeMenu_Click;
             // 
-            // btnSetting
+            // SettingMenu
             // 
-            btnSetting.BackgroundImage = (Image)resources.GetObject("btnSetting.BackgroundImage");
-            btnSetting.BackgroundImageLayout = ImageLayout.Stretch;
-            btnSetting.Dock = DockStyle.Top;
-            btnSetting.FlatAppearance.BorderSize = 0;
-            btnSetting.FlatStyle = FlatStyle.Flat;
-            btnSetting.Location = new Point(0, 460);
-            btnSetting.Name = "btnSetting";
-            btnSetting.Size = new Size(151, 32);
-            btnSetting.TabIndex = 9;
-            btnSetting.Text = " ";
-            btnSetting.UseVisualStyleBackColor = true;
+            SettingMenu.BackgroundImage = (Image)resources.GetObject("SettingMenu.BackgroundImage");
+            SettingMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            SettingMenu.Dock = DockStyle.Top;
+            SettingMenu.FlatAppearance.BorderSize = 0;
+            SettingMenu.FlatStyle = FlatStyle.Flat;
+            SettingMenu.Location = new Point(0, 483);
+            SettingMenu.Name = "SettingMenu";
+            SettingMenu.Size = new Size(151, 32);
+            SettingMenu.TabIndex = 9;
+            SettingMenu.Text = " ";
+            SettingMenu.UseVisualStyleBackColor = true;
             // 
-            // myButton6
+            // ReportMenu
             // 
-            myButton6.BackgroundImage = (Image)resources.GetObject("myButton6.BackgroundImage");
-            myButton6.BackgroundImageLayout = ImageLayout.Stretch;
-            myButton6.Dock = DockStyle.Top;
-            myButton6.FlatAppearance.BorderSize = 0;
-            myButton6.FlatStyle = FlatStyle.Flat;
-            myButton6.Location = new Point(0, 428);
-            myButton6.Name = "myButton6";
-            myButton6.Size = new Size(151, 32);
-            myButton6.TabIndex = 8;
-            myButton6.Text = " ";
-            myButton6.UseVisualStyleBackColor = true;
-            myButton6.Click += myButton6_Click;
+            ReportMenu.BackgroundImage = (Image)resources.GetObject("ReportMenu.BackgroundImage");
+            ReportMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            ReportMenu.Dock = DockStyle.Top;
+            ReportMenu.FlatAppearance.BorderSize = 0;
+            ReportMenu.FlatStyle = FlatStyle.Flat;
+            ReportMenu.Location = new Point(0, 451);
+            ReportMenu.Name = "ReportMenu";
+            ReportMenu.Size = new Size(151, 32);
+            ReportMenu.TabIndex = 8;
+            ReportMenu.Text = " ";
+            ReportMenu.UseVisualStyleBackColor = true;
+            ReportMenu.Click += myButton6_Click;
             // 
-            // myButton5
+            // LibraryMenu
             // 
-            myButton5.BackgroundImage = (Image)resources.GetObject("myButton5.BackgroundImage");
-            myButton5.BackgroundImageLayout = ImageLayout.Stretch;
-            myButton5.Dock = DockStyle.Top;
-            myButton5.FlatAppearance.BorderSize = 0;
-            myButton5.FlatStyle = FlatStyle.Flat;
-            myButton5.Location = new Point(0, 394);
-            myButton5.Name = "myButton5";
-            myButton5.Size = new Size(151, 34);
-            myButton5.TabIndex = 7;
-            myButton5.Text = " ";
-            myButton5.UseVisualStyleBackColor = true;
+            LibraryMenu.BackgroundImage = (Image)resources.GetObject("LibraryMenu.BackgroundImage");
+            LibraryMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            LibraryMenu.Dock = DockStyle.Top;
+            LibraryMenu.FlatAppearance.BorderSize = 0;
+            LibraryMenu.FlatStyle = FlatStyle.Flat;
+            LibraryMenu.Location = new Point(0, 417);
+            LibraryMenu.Name = "LibraryMenu";
+            LibraryMenu.Size = new Size(151, 34);
+            LibraryMenu.TabIndex = 7;
+            LibraryMenu.Text = " ";
+            LibraryMenu.UseVisualStyleBackColor = true;
             // 
-            // myButton4
+            // ParentsMenu
             // 
-            myButton4.BackgroundImage = (Image)resources.GetObject("myButton4.BackgroundImage");
-            myButton4.BackgroundImageLayout = ImageLayout.Stretch;
-            myButton4.Dock = DockStyle.Top;
-            myButton4.FlatAppearance.BorderSize = 0;
-            myButton4.FlatStyle = FlatStyle.Flat;
-            myButton4.Location = new Point(0, 359);
-            myButton4.Name = "myButton4";
-            myButton4.Size = new Size(151, 35);
-            myButton4.TabIndex = 5;
-            myButton4.Text = " ";
-            myButton4.UseVisualStyleBackColor = true;
+            ParentsMenu.BackgroundImage = (Image)resources.GetObject("ParentsMenu.BackgroundImage");
+            ParentsMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            ParentsMenu.Dock = DockStyle.Top;
+            ParentsMenu.FlatAppearance.BorderSize = 0;
+            ParentsMenu.FlatStyle = FlatStyle.Flat;
+            ParentsMenu.Location = new Point(0, 382);
+            ParentsMenu.Name = "ParentsMenu";
+            ParentsMenu.Size = new Size(151, 35);
+            ParentsMenu.TabIndex = 5;
+            ParentsMenu.Text = " ";
+            ParentsMenu.UseVisualStyleBackColor = true;
             // 
-            // instructordropdown
+            // InstructorMenuItem
             // 
-            instructordropdown.BackColor = SystemColors.ButtonFace;
-            instructordropdown.Dock = DockStyle.Top;
-            instructordropdown.Location = new Point(0, 251);
-            instructordropdown.Name = "instructordropdown";
-            instructordropdown.Size = new Size(151, 108);
-            instructordropdown.TabIndex = 4;
+            InstructorMenuItem.BackColor = SystemColors.ButtonHighlight;
+            InstructorMenuItem.Dock = DockStyle.Top;
+            InstructorMenuItem.Location = new Point(0, 280);
+            InstructorMenuItem.Name = "InstructorMenuItem";
+            InstructorMenuItem.Size = new Size(151, 102);
+            InstructorMenuItem.TabIndex = 4;
+            InstructorMenuItem.Paint += InstructorMenuItem_Paint;
             // 
-            // myButton3
+            // InstructorMenu
             // 
-            myButton3.BackgroundImage = (Image)resources.GetObject("myButton3.BackgroundImage");
-            myButton3.BackgroundImageLayout = ImageLayout.Stretch;
-            myButton3.Cursor = Cursors.Hand;
-            myButton3.Dock = DockStyle.Top;
-            myButton3.FlatAppearance.BorderSize = 0;
-            myButton3.FlatStyle = FlatStyle.Flat;
-            myButton3.Location = new Point(0, 216);
-            myButton3.Name = "myButton3";
-            myButton3.Size = new Size(151, 35);
-            myButton3.TabIndex = 3;
-            myButton3.Text = " ";
-            myButton3.UseVisualStyleBackColor = true;
-            myButton3.Click += myButton3_Click;
+            InstructorMenu.BackgroundImage = (Image)resources.GetObject("InstructorMenu.BackgroundImage");
+            InstructorMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            InstructorMenu.Cursor = Cursors.Hand;
+            InstructorMenu.Dock = DockStyle.Top;
+            InstructorMenu.FlatAppearance.BorderSize = 0;
+            InstructorMenu.FlatStyle = FlatStyle.Flat;
+            InstructorMenu.Location = new Point(0, 245);
+            InstructorMenu.Name = "InstructorMenu";
+            InstructorMenu.Size = new Size(151, 35);
+            InstructorMenu.TabIndex = 3;
+            InstructorMenu.Text = " ";
+            InstructorMenu.UseVisualStyleBackColor = true;
+            InstructorMenu.Click += myButton3_Click;
             // 
-            // studentdropdown
+            // StudentMenuItem
             // 
-            studentdropdown.BackColor = SystemColors.ButtonFace;
-            studentdropdown.Controls.Add(subMenu3);
-            studentdropdown.Controls.Add(subMenu2);
-            studentdropdown.Controls.Add(subMenu1);
-            studentdropdown.Dock = DockStyle.Top;
-            studentdropdown.Location = new Point(0, 112);
-            studentdropdown.Name = "studentdropdown";
-            studentdropdown.Size = new Size(151, 104);
-            studentdropdown.TabIndex = 1;
+            StudentMenuItem.BackColor = SystemColors.ButtonFace;
+            StudentMenuItem.Controls.Add(subMenu4);
+            StudentMenuItem.Controls.Add(subMenu3);
+            StudentMenuItem.Controls.Add(subMenu2);
+            StudentMenuItem.Controls.Add(subMenu1);
+            StudentMenuItem.Dock = DockStyle.Top;
+            StudentMenuItem.Location = new Point(0, 112);
+            StudentMenuItem.Name = "StudentMenuItem";
+            StudentMenuItem.Size = new Size(151, 133);
+            StudentMenuItem.TabIndex = 1;
+            // 
+            // subMenu4
+            // 
+            subMenu4.BackColor = SystemColors.ButtonHighlight;
+            subMenu4.Dock = DockStyle.Top;
+            subMenu4.FlatAppearance.BorderSize = 0;
+            subMenu4.FlatStyle = FlatStyle.Flat;
+            subMenu4.Location = new Point(0, 100);
+            subMenu4.Name = "subMenu4";
+            subMenu4.Padding = new Padding(0, 0, 10, 0);
+            subMenu4.Size = new Size(151, 33);
+            subMenu4.TabIndex = 3;
+            subMenu4.Text = "              Grades and Results";
+            subMenu4.TextAlign = ContentAlignment.MiddleLeft;
+            subMenu4.UseVisualStyleBackColor = false;
             // 
             // subMenu3
             // 
@@ -233,8 +252,8 @@ namespace SchoolManagement.Views
             subMenu3.Padding = new Padding(0, 0, 10, 0);
             subMenu3.Size = new Size(151, 33);
             subMenu3.TabIndex = 2;
-            subMenu3.Text = "subMenu3";
-            subMenu3.TextAlign = ContentAlignment.MiddleRight;
+            subMenu3.Text = "              Attendance";
+            subMenu3.TextAlign = ContentAlignment.MiddleLeft;
             subMenu3.UseVisualStyleBackColor = false;
             // 
             // subMenu2
@@ -248,9 +267,10 @@ namespace SchoolManagement.Views
             subMenu2.Padding = new Padding(0, 0, 10, 0);
             subMenu2.Size = new Size(151, 33);
             subMenu2.TabIndex = 1;
-            subMenu2.Text = "subMenu2";
-            subMenu2.TextAlign = ContentAlignment.MiddleRight;
+            subMenu2.Text = "              Student list";
+            subMenu2.TextAlign = ContentAlignment.MiddleLeft;
             subMenu2.UseVisualStyleBackColor = false;
+            subMenu2.Click += subMenu2_Click;
             // 
             // subMenu1
             // 
@@ -263,41 +283,42 @@ namespace SchoolManagement.Views
             subMenu1.Padding = new Padding(0, 0, 10, 0);
             subMenu1.Size = new Size(151, 34);
             subMenu1.TabIndex = 0;
-            subMenu1.Text = "subMenu1";
-            subMenu1.TextAlign = ContentAlignment.MiddleRight;
+            subMenu1.Text = "               Register";
+            subMenu1.TextAlign = ContentAlignment.MiddleLeft;
             subMenu1.UseVisualStyleBackColor = false;
+            subMenu1.Click += subMenu1_Click;
             // 
-            // myButton2
+            // StudentMenu
             // 
-            myButton2.BackColor = SystemColors.Control;
-            myButton2.BackgroundImage = (Image)resources.GetObject("myButton2.BackgroundImage");
-            myButton2.BackgroundImageLayout = ImageLayout.Stretch;
-            myButton2.Dock = DockStyle.Top;
-            myButton2.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 1, 0);
-            myButton2.FlatStyle = FlatStyle.Flat;
-            myButton2.Location = new Point(0, 79);
-            myButton2.Name = "myButton2";
-            myButton2.Size = new Size(151, 33);
-            myButton2.TabIndex = 1;
-            myButton2.Text = " \r\n";
-            myButton2.TextImageRelation = TextImageRelation.ImageAboveText;
-            myButton2.UseVisualStyleBackColor = false;
-            myButton2.Click += myButton2_Click;
+            StudentMenu.BackColor = SystemColors.Control;
+            StudentMenu.BackgroundImage = (Image)resources.GetObject("StudentMenu.BackgroundImage");
+            StudentMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            StudentMenu.Dock = DockStyle.Top;
+            StudentMenu.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 1, 0);
+            StudentMenu.FlatStyle = FlatStyle.Flat;
+            StudentMenu.Location = new Point(0, 79);
+            StudentMenu.Name = "StudentMenu";
+            StudentMenu.Size = new Size(151, 33);
+            StudentMenu.TabIndex = 1;
+            StudentMenu.Text = " \r\n";
+            StudentMenu.TextImageRelation = TextImageRelation.ImageAboveText;
+            StudentMenu.UseVisualStyleBackColor = false;
+            StudentMenu.Click += myButton2_Click;
             // 
-            // myButton1
+            // DashboardMenu
             // 
-            myButton1.BackColor = Color.Transparent;
-            myButton1.BackgroundImage = (Image)resources.GetObject("myButton1.BackgroundImage");
-            myButton1.BackgroundImageLayout = ImageLayout.Stretch;
-            myButton1.Dock = DockStyle.Top;
-            myButton1.FlatAppearance.BorderSize = 0;
-            myButton1.FlatStyle = FlatStyle.Flat;
-            myButton1.Location = new Point(0, 48);
-            myButton1.Name = "myButton1";
-            myButton1.Size = new Size(151, 31);
-            myButton1.TabIndex = 0;
-            myButton1.Text = " ";
-            myButton1.UseVisualStyleBackColor = false;
+            DashboardMenu.BackColor = Color.Transparent;
+            DashboardMenu.BackgroundImage = (Image)resources.GetObject("DashboardMenu.BackgroundImage");
+            DashboardMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            DashboardMenu.Dock = DockStyle.Top;
+            DashboardMenu.FlatAppearance.BorderSize = 0;
+            DashboardMenu.FlatStyle = FlatStyle.Flat;
+            DashboardMenu.Location = new Point(0, 48);
+            DashboardMenu.Name = "DashboardMenu";
+            DashboardMenu.Size = new Size(151, 31);
+            DashboardMenu.TabIndex = 0;
+            DashboardMenu.Text = " ";
+            DashboardMenu.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -332,7 +353,7 @@ namespace SchoolManagement.Views
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Location = new Point(151, 0);
             panelHeader.Name = "panelHeader";
-            panelHeader.Size = new Size(567, 48);
+            panelHeader.Size = new Size(776, 48);
             panelHeader.TabIndex = 1;
             // 
             // label1
@@ -342,7 +363,7 @@ namespace SchoolManagement.Views
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(439, 15);
+            label1.Location = new Point(648, 15);
             label1.Name = "label1";
             label1.Size = new Size(48, 19);
             label1.TabIndex = 3;
@@ -353,7 +374,7 @@ namespace SchoolManagement.Views
             circularPictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             circularPictureBox1.BackColor = Color.Transparent;
             circularPictureBox1.Image = (Image)resources.GetObject("circularPictureBox1.Image");
-            circularPictureBox1.Location = new Point(403, 12);
+            circularPictureBox1.Location = new Point(612, 12);
             circularPictureBox1.Name = "circularPictureBox1";
             circularPictureBox1.Size = new Size(30, 30);
             circularPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -366,7 +387,7 @@ namespace SchoolManagement.Views
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(510, 12);
+            pictureBox2.Location = new Point(719, 12);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(31, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -388,22 +409,22 @@ namespace SchoolManagement.Views
             // 
             // panel1
             // 
-            panel1.Controls.Add(panel5);
+            panel1.Controls.Add(PanelBody);
             panel1.Controls.Add(panel4);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(151, 48);
             panel1.Name = "panel1";
-            panel1.Size = new Size(567, 507);
+            panel1.Size = new Size(776, 507);
             panel1.TabIndex = 2;
             // 
-            // panel5
+            // PanelBody
             // 
-            panel5.Controls.Add(dataGridView1);
-            panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(0, 162);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(567, 345);
-            panel5.TabIndex = 1;
+            PanelBody.Controls.Add(dataGridView1);
+            PanelBody.Dock = DockStyle.Fill;
+            PanelBody.Location = new Point(0, 162);
+            PanelBody.Name = "PanelBody";
+            PanelBody.Size = new Size(776, 345);
+            PanelBody.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -413,8 +434,10 @@ namespace SchoolManagement.Views
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(567, 345);
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(776, 345);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // panel4
             // 
@@ -425,7 +448,7 @@ namespace SchoolManagement.Views
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(567, 162);
+            panel4.Size = new Size(776, 162);
             panel4.TabIndex = 0;
             // 
             // panel8
@@ -533,7 +556,7 @@ namespace SchoolManagement.Views
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(718, 555);
+            ClientSize = new Size(927, 555);
             Controls.Add(panel1);
             Controls.Add(panelHeader);
             Controls.Add(panelMenu);
@@ -541,8 +564,8 @@ namespace SchoolManagement.Views
             Text = "MainForm";
             Load += MainForm_Load;
             panelMenu.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            studentdropdown.ResumeLayout(false);
+            AllMenuItems.ResumeLayout(false);
+            StudentMenuItem.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panelHeader.ResumeLayout(false);
@@ -551,7 +574,7 @@ namespace SchoolManagement.Views
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)miniMenu).EndInit();
             panel1.ResumeLayout(false);
-            panel5.ResumeLayout(false);
+            PanelBody.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel4.ResumeLayout(false);
             panel8.ResumeLayout(false);
@@ -571,12 +594,12 @@ namespace SchoolManagement.Views
         private PictureBox miniMenu;
         private PictureBox pictureBox2;
         private Label lblBrand;
-        private Panel panel2;
+        private Panel AllMenuItems;
         private Panel panel3;
-        private CustomControl.MyButton myButton2;
-        private CustomControl.MyButton myButton1;
-        private Panel studentdropdown;
-        private Panel panel5;
+        private CustomControl.MyButton StudentMenu;
+        private CustomControl.MyButton DashboardMenu;
+        private Panel StudentMenuItem;
+        private Panel PanelBody;
         private DataGridView dataGridView1;
         private Panel panel4;
         private CustomControl.subMenu subMenu3;
@@ -584,12 +607,12 @@ namespace SchoolManagement.Views
         private CustomControl.subMenu subMenu1;
         private CustomControl.CircularPictureBox circularPictureBox1;
         private Label label1;
-        private Panel instructordropdown;
-        private MyButton myButton3;
-        private MyButton myButton5;
-        private MyButton myButton4;
-        private MyButton btnSetting;
-        private MyButton myButton6;
+        private Panel InstructorMenuItem;
+        private MyButton InstructorMenu;
+        private MyButton LibraryMenu;
+        private MyButton ParentsMenu;
+        private MyButton SettingMenu;
+        private MyButton ReportMenu;
         private Panel panel6;
         private Panel panel8;
         private Panel panel7;
@@ -599,6 +622,7 @@ namespace SchoolManagement.Views
         private Label label6;
         private Label label5;
         private Label label4;
-        private MyButton myButton7;
+        private MyButton EmployeeMenu;
+        private subMenu subMenu4;
     }
 }

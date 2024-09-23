@@ -1,12 +1,15 @@
-﻿using SchoolManagement.Models;
-using System.Data.SqlClient;
+﻿using SchoolManagement.Repositories;
+using SchoolManagement.Views.Component;
+using SchoolManagement.Views.Students;
 
 namespace SchoolManagement.Views
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        string RoleMenu = string.Empty;
+        public MainForm(string role)
         {
+            RoleMenu = role;
             InitializeComponent();
         }
 
@@ -39,53 +42,50 @@ namespace SchoolManagement.Views
 
         private void myButton2_Click(object sender, EventArgs e)
         {
-            if (studentdropdown.Visible == true)
-                studentdropdown.Visible = false;
+            if (StudentMenuItem.Visible == true)
+                StudentMenuItem.Visible = false;
             else
-                studentdropdown.Visible = true;
+                StudentMenuItem.Visible = true;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            List<Users> users = new List<Users>();
- 
-            //1. Connection String
-            
-            SqlConnection connection = null;
-            connection = new SqlConnection("Server=.;Database=SchoolManagement;User Id=sa;Password=Pa$$w0rd@admin;");
-            connection.Open(); // Open the connection
+          
+            // Role check // 
+            LoadMenuButtons();
 
-            //2. Sql command
-            
-            SqlCommand command = new SqlCommand("SELECT * FROM users", connection);
-            //command.ExecuteNonQuery();
-            
-            //3. Data reader
-            SqlDataReader sqlDataReader = command.ExecuteReader();
-            
-            while (sqlDataReader.Read())
-            {
-
-                //user.UserId = Convert.ToInt32(sqlDataReader[0]);
-                //user.Username = sqlDataReader[1].ToString();
-                //user.Role = sqlDataReader[4].ToString();
-
-                users.Add(new Users {
-                    UserId = Convert.ToInt32(sqlDataReader["UserID"]),
-                    Username = sqlDataReader["Username"].ToString(),
-                    Role = sqlDataReader["Role"].ToString()
-                });
-                
-            }
-
-            connection.Close();
-
-           
-            dataGridView1.DataSource = users;
-
-            lblTotalStudent.Text = users.Count.ToString();
+            //dataGridView1.DataSource =  UserRepository.GetAllUsers();
+            lblTotalStudent.Text = UserRepository.GetAllUsers().Count.ToString();
         }
 
+        private void LoadMenuButtons()
+        {
+            var visibleButtons = UserRepository.GetMenuItemsByRole(RoleMenu);
+
+            HideAllMenuButtons();
+
+            foreach (var buttonName in visibleButtons)
+            {
+                Control[] foundControls = this.Controls.Find(buttonName, true);
+                if (foundControls.Length > 0)
+                {
+                    foundControls[0].Visible = true; // Make the button visible
+                }
+            }
+        }
+        private void HideAllMenuButtons()
+        {
+            DashboardMenu.Visible = false;
+            StudentMenu.Visible = false;
+            StudentMenuItem.Visible = false;
+            InstructorMenu.Visible = false;
+            InstructorMenuItem.Visible = false;
+            ParentsMenu.Visible = false;
+            LibraryMenu.Visible = false;
+            ReportMenu.Visible = false;
+            SettingMenu.Visible = false;
+            EmployeeMenu.Visible = false;
+        }
         private void circularPictureBox1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -95,15 +95,45 @@ namespace SchoolManagement.Views
             {
                 circularPictureBox1.Image = Image.FromFile(openFileDialog.FileName);
             }
+
+            //using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            //{
+            //    openFileDialog.InitialDirectory = "c:\\";
+            //    openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+            //    openFileDialog.Title = "Select Student Photo";
+
+            //    if (openFileDialog.ShowDialog() == DialogResult.OK)
+            //    {
+            //        // Save the selected photo path
+            //        string photoPath = openFileDialog.FileName;
+            //        // Upload the photo for a specific student (e.g., studentId is retrieved from your form)
+            //        UploadStudentPhoto(studentId, photoPath);
+            //    }
+            //}
+
+
+        }
+
+        private void LoadStudentPhoto(int studentId)
+        {
+            string photoPath = new StudentRepository().GetStudentPhotoPath(studentId);
+            if (!string.IsNullOrEmpty(photoPath))
+            {
+                string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, photoPath.TrimStart('/').Replace('/', '\\'));
+                if (File.Exists(fullPath))
+                {
+                    circularPictureBox1.Image = Image.FromFile(fullPath);
+                }
+            }
         }
 
         private void myButton3_Click(object sender, EventArgs e)
         {
 
-            if (instructordropdown.Visible == true)
-                instructordropdown.Visible = false;
+            if (InstructorMenuItem.Visible == true)
+                InstructorMenuItem.Visible = false;
             else
-                instructordropdown.Visible = true;
+                InstructorMenuItem.Visible = true;
         }
 
         private void myButton6_Click(object sender, EventArgs e)
@@ -112,6 +142,47 @@ namespace SchoolManagement.Views
         }
 
         private void lblTotalStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmployeeMenu_Click(object sender, EventArgs e)
+        {
+
+            UserList childForm = new UserList();
+            childForm.TopLevel = false;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(childForm);
+            childForm.Dock = DockStyle.Fill;
+            childForm.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void subMenu2_Click(object sender, EventArgs e)
+        {
+            replaceform(new StudentList());
+        }
+
+        private void subMenu1_Click(object sender, EventArgs e)
+        {
+            replaceform(new AddStudent());
+        }
+
+        void replaceform(Form childForm)
+        {
+            //StudentList childForm = new StudentList();
+            childForm.TopLevel = false;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(childForm);
+            childForm.Dock = DockStyle.Fill;
+            childForm.Show();
+        }
+
+        private void InstructorMenuItem_Paint(object sender, PaintEventArgs e)
         {
 
         }

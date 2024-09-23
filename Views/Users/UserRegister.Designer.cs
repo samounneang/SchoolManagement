@@ -31,13 +31,12 @@ namespace SchoolManagement.Views
         private void InitializeComponent()
         {
             lblLogin = new Label();
-            linkForgetPassword = new LinkLabel();
             txtPassword = new TextBox();
             txtUsername = new TextBox();
             btnRegister = new Button();
             btnLogin = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtConPassword = new TextBox();
+            txtEmail = new TextBox();
             SuspendLayout();
             // 
             // lblLogin
@@ -50,18 +49,6 @@ namespace SchoolManagement.Views
             lblLogin.TabIndex = 11;
             lblLogin.Text = "ប្រព័ន្ធគ្របគ្រងសាលា";
             // 
-            // linkForgetPassword
-            // 
-            linkForgetPassword.AutoSize = true;
-            linkForgetPassword.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkForgetPassword.Location = new Point(177, 314);
-            linkForgetPassword.Name = "linkForgetPassword";
-            linkForgetPassword.Size = new Size(97, 22);
-            linkForgetPassword.TabIndex = 10;
-            linkForgetPassword.TabStop = true;
-            linkForgetPassword.Text = " ភ្លេចលេខសម្ងាត់?";
-            linkForgetPassword.LinkClicked += linkForgetPassword_LinkClicked;
-            // 
             // txtPassword
             // 
             txtPassword.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -70,7 +57,7 @@ namespace SchoolManagement.Views
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "លេខសម្ងាត់";
             txtPassword.Size = new Size(238, 30);
-            txtPassword.TabIndex = 7;
+            txtPassword.TabIndex = 2;
             // 
             // txtUsername
             // 
@@ -79,17 +66,19 @@ namespace SchoolManagement.Views
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderText = "ឈ្មោះអ្នកប្រើ";
             txtUsername.Size = new Size(238, 30);
-            txtUsername.TabIndex = 6;
+            txtUsername.TabIndex = 0;
             // 
             // btnRegister
             // 
+            btnRegister.BackColor = SystemColors.AppWorkspace;
             btnRegister.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRegister.Location = new Point(228, 263);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(113, 30);
-            btnRegister.TabIndex = 9;
+            btnRegister.TabIndex = 4;
             btnRegister.Text = "&ចុះឈ្មោះ";
-            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.UseVisualStyleBackColor = false;
+            btnRegister.Click += btnRegister_Click;
             // 
             // btnLogin
             // 
@@ -98,29 +87,29 @@ namespace SchoolManagement.Views
             btnLogin.Location = new Point(103, 263);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(119, 30);
-            btnLogin.TabIndex = 8;
+            btnLogin.TabIndex = 5;
             btnLogin.Text = "&ចូលប្រើ";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
-            // textBox1
+            // txtConPassword
             // 
-            textBox1.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(103, 213);
-            textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '*';
-            textBox1.PlaceholderText = "បញ្ជាក់លេខសម្ងាត់";
-            textBox1.Size = new Size(238, 30);
-            textBox1.TabIndex = 12;
+            txtConPassword.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtConPassword.Location = new Point(103, 213);
+            txtConPassword.Name = "txtConPassword";
+            txtConPassword.PasswordChar = '*';
+            txtConPassword.PlaceholderText = "បញ្ជាក់លេខសម្ងាត់";
+            txtConPassword.Size = new Size(238, 30);
+            txtConPassword.TabIndex = 3;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(103, 141);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "អ៊ីមែល";
-            textBox2.Size = new Size(238, 30);
-            textBox2.TabIndex = 6;
+            txtEmail.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(103, 141);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "អ៊ីមែល";
+            txtEmail.Size = new Size(238, 30);
+            txtEmail.TabIndex = 1;
             // 
             // UserRegister
             // 
@@ -128,11 +117,10 @@ namespace SchoolManagement.Views
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(457, 354);
             ControlBox = false;
-            Controls.Add(textBox1);
+            Controls.Add(txtConPassword);
             Controls.Add(lblLogin);
-            Controls.Add(linkForgetPassword);
             Controls.Add(txtPassword);
-            Controls.Add(textBox2);
+            Controls.Add(txtEmail);
             Controls.Add(txtUsername);
             Controls.Add(btnRegister);
             Controls.Add(btnLogin);
@@ -151,12 +139,11 @@ namespace SchoolManagement.Views
         #endregion
 
         private Label lblLogin;
-        private LinkLabel linkForgetPassword;
-        private TextBox txtPassword;
-        private TextBox txtUsername;
+        protected TextBox txtPassword;
+        protected TextBox txtUsername;
         private Button btnRegister;
         private Button btnLogin;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        protected TextBox txtConPassword;
+        protected TextBox txtEmail;
     }
 }

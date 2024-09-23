@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="myButton7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="EmployeeMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAnwAAAB7CAYAAADud13HAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAEHhJREFUeF7t3c+LHkUex/H9C73qbZU9bDABIwY0GMGAJBEEk/FHJIm4kMwiaCYe
+        vAAADrwBlbxySQAAEHhJREFUeF7t3c+LHkUex/H9C73qbZU9bDABIwY0GMGAJBEEk/FHJIm4kMwiaCYe
         XOMedCNsspJgFNRMEMx6y0EvHjw/y+eB2qn5zre7q/rH09U178MLnXmqurqrn9Cfqequ/tMff/yxAgAA
         QL3Wge+3335b/fLLLwAAAKjQOvA9fvx49f333wMAAKBCBD4AAIDKrQPfr7/+uvrpp58AAABQoXXg+/33
         39ejfAAAAKgPgQ8AAKByBD4AAIDKEfgAAAAqR+ADAACoHIEPAACgcgQ+AACAyhH4AAAAKkfgAwAAqByB
@@ -194,7 +194,7 @@
         yhH4AAAAKkfgAwAAqByBDwAAoHIEPgAAgKo9Xv0Pep+IXSeN1xoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnSetting.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SettingMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAo0AAAB7CAYAAAAR+bpgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAADPFJREFUeF7t3U+PHNV+x2FeIVvYBZRFInvDwou7YREpMkSKFNs3uVcCR4oEW8wG
@@ -255,7 +255,7 @@
         AQDoEo0AAHSJRgAAukQjAABdohEAgI7fN/8Hz1uI0YyRbEQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="myButton6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ReportMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAApEAAACCCAYAAAAe9pPXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAADXVJREFUeF7t3c+rZGV+x/H8hW51FyWLiM7CgIsZMpIMhDaBQLRhSGiFLFqGgWD3
@@ -318,7 +318,7 @@
         ALqJSAAAuolIAAC6iUgAALqJSAAAuolIAAC6iUgAALpdROQPZ/8PeJHwMXrMTWgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="myButton5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="LibraryMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAo8AAACBCAYAAAChBVAiAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAELVJREFUeF7t3d2rHOUdwHH/Qm/1rkovKqagxYARFRXEWCg0ia+YiIUkRWiT9MJ4
@@ -395,7 +395,7 @@
         zXiUJElSmvEoSZKkNONRkiRJacajJEmS0m7fvr34P5T1tzDjERUGAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="myButton4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ParentsMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqAAAACFCAYAAACEwkppAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAD8FJREFUeF7t3d+vHOV9x3H+Qm7hrqBeFGEkHGEJVylqIkWGSJFSXFIiIEor2ylS
@@ -468,7 +468,7 @@
         ADQlQAEAaEqAAgDQlAAFAKApAQoAQEM/nv0fNsngU/bdIJAAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="myButton3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="InstructorMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAo4AAACBCAYAAABOxzscAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAESRJREFUeF7t3c2PHMUZx3H+Qq5wi1EOWBgpG2EpRoBiJGQbCQl748QRawuQvRES
@@ -547,7 +547,7 @@
         CEcAAAC4EI4AAABwIRwBAADg8Pjg/3DHCWjBvPW8AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="myButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="StudentMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAxgAAACdCAYAAAA36N6SAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAE85JREFUeF7t3c+rHFXaB/D3L3Qbd2/kXSiJMBlGmNlkIUhUEIwXRYl3mAHjIGhu
@@ -638,7 +638,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="myButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DashboardMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAwcAAACaCAYAAAD8SDRPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAFLRJREFUeF7t3c2rJNd5B2D9hd5au9hkI+RAEiKIjG0cgRhNIJDR+BPNGAekCYIg

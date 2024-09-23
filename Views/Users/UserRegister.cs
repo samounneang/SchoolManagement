@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using SchoolManagement.Repositories;
 
 namespace SchoolManagement.Views
 {
@@ -26,6 +18,17 @@ namespace SchoolManagement.Views
         private void linkForgetPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Your password has been reset.");
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != txtConPassword.Text)
+            {
+                MessageBox.Show("Password does not match.");
+                return;
+            }
+            string UserId = UserRepository.CreateUserId(); // Get new User ID from DB
+            UserRepository.AddUser(UserId,txtUsername.Text,txtEmail.Text,txtPassword.Text,txtConPassword.Text);
         }
     }
 }

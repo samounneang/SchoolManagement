@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserLogin));
             btnLogin = new Button();
             btnRegister = new Button();
-            txtUsername = new TextBox();
+            txtUserId = new TextBox();
             txtPassword = new TextBox();
             linkForgetPassword = new LinkLabel();
             lblLogin = new Label();
@@ -53,7 +53,7 @@
             btnLogin.TabIndex = 2;
             btnLogin.Text = "ចូលប្រើ";
             btnLogin.UseVisualStyleBackColor = true;
-            btnLogin.Click += button1_Click;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnRegister
             // 
@@ -66,14 +66,14 @@
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += button2_Click;
             // 
-            // txtUsername
+            // txtUserId
             // 
-            txtUsername.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.Location = new Point(100, 126);
-            txtUsername.Name = "txtUsername";
-            txtUsername.PlaceholderText = "ឈ្មោះអ្នកប្រើ";
-            txtUsername.Size = new Size(238, 30);
-            txtUsername.TabIndex = 0;
+            txtUserId.Font = new Font("Khmer OS Battambang", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUserId.Location = new Point(100, 126);
+            txtUserId.Name = "txtUserId";
+            txtUserId.PlaceholderText = "លេខសំគាល់";
+            txtUserId.Size = new Size(238, 30);
+            txtUserId.TabIndex = 0;
             // 
             // txtPassword
             // 
@@ -124,7 +124,7 @@
             Controls.Add(lblLogin);
             Controls.Add(linkForgetPassword);
             Controls.Add(txtPassword);
-            Controls.Add(txtUsername);
+            Controls.Add(txtUserId);
             Controls.Add(btnRegister);
             Controls.Add(btnLogin);
             FormBorderStyle = FormBorderStyle.None;
@@ -145,7 +145,7 @@
 
         private Button btnLogin;
         private Button btnRegister;
-        private TextBox txtUsername;
+        private TextBox txtUserId;
         private TextBox txtPassword;
         private LinkLabel linkForgetPassword;
         private Label lblLogin;

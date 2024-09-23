@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace SchoolManagement.Models
 {
-    internal class Users
+    public class User
     {
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public string Username { get; set; }
         public string Password { get; set; } // Ensure to hash and salt in real applications
+        public string Email { get; set; }
+        public string Fullname { get; set; }
         public string Role { get; set; }
+        public bool IsActive { get; set; }
+        public string CreateAt { get; set; }
+        public string UpdateAt { get; set; }
     }
 }
