@@ -15,7 +15,6 @@ namespace SchoolManagement.Views
 
         }
         
-
         private void label1_MouseDown(object sender, MouseEventArgs e)
         {
             DoDragDrop(((Label)sender).Text, DragDropEffects.All);
